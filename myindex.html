@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <h1>Calculator</h1>
+      </div>
+      <div class="theme-bar">
+        <div class="theme">
+          <p>THEME</p>
+        </div>
+        <div class="n-theme">
+          <div class="choice">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <div class="box">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen">
+      <form name="calc">
+        <input type="text" name="text" readonly id="screen" />
+      </form>
+    </div>
+
+    <div class="btn">
+      <div class="grid-btn">
+        <div class="grid-item">
+          <button class="num" onclick="document.calc.text.value+='7'">7</button>
+        </div>
+        <div class="grid-item">
+          <button class="num" onclick="document.calc.text.value+='8'">8</button>
+        </div>
+        <div class="grid-item">
+          <button class="num" onclick="document.calc.text.value+='9'">9</button>
+        </div>
+        <div class="grid-item">
+          <button class="del" onclick="del()">DEL</button>
+        </div>
+        <div class="grid-item">
+          <button class="num" onclick="document.calc.text.value+='4'">4</button>
+        </div>
+        <div class="grid-item">
+          <button class="num" onclick="document.calc.text.value+='5'">5</button>
+        </div>
+        <div class="grid-item">
+          <button class="num" onclick="document.calc.text.value+='6'">6</button>
+        </div>
+        <div class="grid-item">
+          <button onclick="document.calc.text.value+='+'">+</button>
+        </div>
+        <div class="grid-item">
+          <button class="num" onclick="document.calc.text.value+='1'">1</button>
+        </div>
+        <div class="grid-item">
+          <button class="num" onclick="document.calc.text.value+='2'">2</button>
+        </div>
+        <div class="grid-item">
+          <button class="num" onclick="document.calc.text.value+='3'">3</button>
+        </div>
+        <div class="grid-item">
+          <button onclick="document.calc.text.value+='-'">-</button>
+        </div>
+        <div class="grid-item">
+          <button onclick="document.calc.text.value+='.'">.</button>
+        </div>
+        <div class="grid-item">
+          <button class="num" onclick="document.calc.text.value+='0'">0</button>
+        </div>
+        <div class="grid-item">
+          <button onclick="document.calc.text.value+='/'">/</button>
+        </div>
+        <div class="grid-item">
+          <button onclick="document.calc.text.value+='*'">X</button>
+        </div>
+
+        <div class="grid-item1">
+          <button
+            class="equal"
+            onclick="document.calc.text.value= eval(calc.text.value)"
+          >
+            =
+          </button>
+        </div>
+        <div class="grid-item2">
+          <button class="reset" onclick="document.calc.text.value=''">
+            RESET
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="calc.js"></script>
+  </body>
+</html>
